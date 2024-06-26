@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Reviews for the {{Genre}} Genre</h1>
+
+    <table style = "width: 80%" border = 1>
+        <thead>
+           <td>Title</td>
+           <td>Director</td>
+           <td>Review</td>
+           <td>Rating</td>
+        </thead>
+        
+        {% for row in rows %}
+           <tr>
+              <td style="width:15%">{{row["Title"]}}</td>
+              <td style="width:15%">{{row["Director"]}}</td>
+              <td> {{ row["Review"]}}</td>
+              <td style="width:10%">{{row["Rating"]}}</td>	
+           </tr>
+        {% endfor %}
+     </table>
+     
+     <a href = "/">Back to home</a>
+</body>
+</html>

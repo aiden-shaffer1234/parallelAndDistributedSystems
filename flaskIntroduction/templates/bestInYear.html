@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Best Movies of {{Year}}</h1>
+
+    <table style = "width: 40%" border = 1>
+        <thead>
+           <td>Title</td>
+           <td>Genre</td>
+           <td>Rating</td>
+        </thead>
+        
+        {% for row in rows %}
+           <tr>
+              <td>{{row["Title"]}}</td>
+              <td>{{row["Genre"]}}</td>
+              <td>{{row["AverageRating"]}}</td>	
+           </tr>
+        {% endfor %}
+     </table>
+     
+     <a href = "/">Back to home</a>
+</body>
+</html>

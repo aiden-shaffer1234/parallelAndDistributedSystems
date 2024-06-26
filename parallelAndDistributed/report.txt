@@ -1,0 +1,27 @@
+Without the monte carlos approach, this problem would become much more 
+difficult. The approach that I believe you would have to take is to construct
+a new 3D shape out of all the rectangles. You would end up with a list of 
+vertices that consists of a mix of the provided vertices along with new 
+vertices made from the intersection points of the rectangles. This would 
+cause a whole new challenge of its own because it would cause the programmer
+to have to check for intersections and track exactly where the intersection
+starts and stops to create an accurate model. After creating an accurate 
+model, for the sake of area calculation, I would then split the new shape 
+into new sections based on when the dimensions change, creating a new set 
+of rectangles that all have different dimensions. This would cause the 
+programmer to solve a whole new problem which would be to write an 
+algorithm to detect when dimensions of the shape changes, and then divide the 
+detected spot into reasonable new rectangles. This is a similar approach 
+to how you learn to take the area of a polygon in grade school. But, 
+dividing it into reasonable sections would be difficult because there 
+is likely more than one way to split it so that it can later be used 
+for an area calculation. This problem will more than likely cause a 
+consistency bug, which will be hard to track later on. Finally, after 
+the new set of rectangles are made, I would take the area of all the 
+rectangles and add them up to a final sum. This sum would represent 
+the amount of batter needed to complete the shape. monte carlo does not 
+care about the tedious intersection points and the actual shape of the 
+pancake, which allows us to disregard any tasks involving finding 
+intersections and splitting the shape into different shapes. all it 
+cares about is having an accurate surrounding box, and having a way
+to check boundaries.

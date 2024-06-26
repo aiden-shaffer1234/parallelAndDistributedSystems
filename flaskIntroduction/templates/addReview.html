@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new Review</title>
+</head>
+<body>
+    <!-- where to go after submit is hit -->
+    <form action = "/addrev" method = "POST">
+        <h2>Submit a New Review</h2>
+
+        Your username:
+        <input type = "text" name = "Your username:"><br>
+
+        <h2>Movie Information</h2>
+
+        Title: 
+        <input type="text" name = "Title"><br>
+
+        Director: 
+        <input type="text" name = "Director"><br>
+
+        Year: 
+        <input type="number" name = "Year"><br>
+
+        Genre: 
+        <input type="text" name = "Genre"><br>
+
+        <h2>Your Review</h2>
+
+        Review: 
+        <textarea name="Review"></textarea> <br>
+
+        Rating: 
+        <input type="text" name = "Rating"><br><br>
+        <input type = "submit" value = "submit" />
+
+        <h2><a href="/">Back to home</a></h2>
+    </form>
+</body>
+</html>
